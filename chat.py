@@ -15,7 +15,8 @@ def convert(lines, person_a, person_b):
 		elif line == person_b:
 			person = person_b
 			continue
-		new.append(person + ': ' + line)
+		if person:
+			new.append(person + ': ' + line)
 	return new
 
 def write_file(output_file, lines):
